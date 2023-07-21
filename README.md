@@ -24,7 +24,7 @@ $ docker-compose up -d
 The environment takes about 1 minute to get up (depending on your Docker host) for the first time since Wazuh Indexer must be started for the first time and the indexes and index patterns must be generated.
 
 
-#Remove thread found on Virus Total
+# Remove thread found on Virus Total
 Place this remove-threat.sh script in /var/ossec/active-response/bin/
 ```
 #!/bin/bash
