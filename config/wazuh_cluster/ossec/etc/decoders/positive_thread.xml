@@ -1,0 +1,5 @@
+<decoder name="ar_log_fields">
+    <parent>ar_log</parent>
+    <regex offset="after_parent">^(\S+) Removed positive threat located in (\S+)</regex>
+    <order>script_name, path</order>
+</decoder>

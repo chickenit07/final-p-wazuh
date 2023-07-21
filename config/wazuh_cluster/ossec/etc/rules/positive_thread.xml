@@ -1,0 +1,7 @@
+<group name="syscheck,virustotal,">
+  <rule id="100092" level="12">
+    <if_sid>607</if_sid>
+    <match>Removed positive</match>
+    <description>$(script_name) Removed positive threat located in $(path)</description>
+  </rule>
+</group>
