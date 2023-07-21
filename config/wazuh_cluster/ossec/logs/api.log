@@ -299,3 +299,64 @@
 2023/07/21 07:30:01 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.132s: 200
 2023/07/21 07:30:01 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"offset": "0", "limit": "1", "q": "id!=000"} and body {} done in 0.052s: 200
 2023/07/21 07:30:01 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"offset": "0", "limit": "500", "q": "id!=000"} and body {} done in 0.029s: 200
+2023/07/21 07:35:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/remoted" with parameters {"pretty": ""} and body {} done in 0.134s: 200
+2023/07/21 07:35:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/analysisd" with parameters {"pretty": ""} and body {} done in 0.050s: 200
+2023/07/21 07:40:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/remoted" with parameters {"pretty": ""} and body {} done in 0.083s: 200
+2023/07/21 07:40:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/analysisd" with parameters {"pretty": ""} and body {} done in 0.084s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "POST /security/user/authenticate" with parameters {} and body {} done in 4.340s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "POST /security/user/authenticate" with parameters {} and body {} done in 2.735s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "POST /security/user/authenticate" with parameters {} and body {} done in 2.761s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "GET /security/users/me/policies" with parameters {} and body {"idHost": "1513629884013"} done in 0.024s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "GET /manager/info" with parameters {} and body {} done in 0.228s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "GET /manager/info" with parameters {} and body {} done in 0.086s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"agents_list": "000"} and body {} done in 0.109s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"agents_list": "000"} and body {} done in 0.079s: 200
+2023/07/21 07:42:16 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.074s: 200
+2023/07/21 07:42:17 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.067s: 200
+2023/07/21 07:42:17 INFO: wazuh-wui 172.18.0.4 "GET /" with parameters {} and body {} done in 0.028s: 200
+2023/07/21 07:42:17 INFO: wazuh-wui 172.18.0.4 "GET /" with parameters {} and body {} done in 0.042s: 200
+2023/07/21 07:42:17 INFO: wazuh-wui 172.18.0.4 "GET /agents/summary/status" with parameters {} and body {} done in 0.102s: 200
+2023/07/21 07:42:17 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.039s: 200
+2023/07/21 07:42:18 INFO: wazuh-wui 172.18.0.4 "GET /manager/api/config" with parameters {} and body {} done in 0.032s: 200
+2023/07/21 07:42:18 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.041s: 200
+2023/07/21 07:42:18 INFO: wazuh-wui 172.18.0.4 "GET /manager/configuration/request/remote" with parameters {} and body {} done in 0.040s: 200
+2023/07/21 07:42:18 INFO: wazuh-wui 172.18.0.4 "GET /agents/000/config/auth/auth" with parameters {} and body {} done in 0.039s: 200
+2023/07/21 07:42:18 INFO: wazuh-wui 172.18.0.4 "GET /groups" with parameters {} and body {} done in 0.035s: 200
+2023/07/21 07:42:22 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.126s: 200
+2023/07/21 07:42:25 INFO: wazuh-wui 172.18.0.4 "GET /rules" with parameters {"offset": "0", "limit": "10", "sort": "+id"} and body {} done in 3.312s: 200
+2023/07/21 07:42:29 INFO: wazuh-wui 172.18.0.4 "GET /rules" with parameters {"search": "87105", "offset": "0", "limit": "10", "sort": "+id"} and body {} done in 3.077s: 200
+2023/07/21 07:44:36 INFO: wazuh-wui 172.18.0.4 "GET /rules" with parameters {"rule_ids": "87105"} and body {} done in 2.273s: 200
+2023/07/21 07:44:39 INFO: wazuh-wui 172.18.0.4 "GET /mitre/techniques" with parameters {"q": "external_id=T1203"} and body {} done in 2.287s: 200
+2023/07/21 07:44:41 INFO: wazuh-wui 172.18.0.4 "GET /rules" with parameters {"rule_ids": "87105"} and body {} done in 3.249s: 200
+2023/07/21 07:44:41 INFO: wazuh-wui 172.18.0.4 "GET /mitre/tactics" with parameters {"tactic_ids": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5"} and body {} done in 2.666s: 200
+2023/07/21 07:44:45 INFO: wazuh-wui 172.18.0.4 "GET /rules" with parameters {"rule_ids": "87105"} and body {} done in 4.537s: 200
+2023/07/21 07:44:45 INFO: wazuh-wui 172.18.0.4 "GET /mitre/techniques" with parameters {"q": "external_id=T1203"} and body {} done in 3.772s: 200
+2023/07/21 07:44:46 INFO: wazuh-wui 172.18.0.4 "GET /mitre/techniques" with parameters {"q": "external_id=T1203"} and body {} done in 0.490s: 200
+2023/07/21 07:44:48 INFO: wazuh-wui 172.18.0.4 "GET /mitre/tactics" with parameters {"tactic_ids": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5"} and body {} done in 2.013s: 200
+2023/07/21 07:44:51 INFO: wazuh-wui 172.18.0.4 "GET /security/users/me/policies" with parameters {} and body {"idHost": "1513629884013"} done in 3.585s: 200
+2023/07/21 07:44:51 INFO: wazuh-wui 172.18.0.4 "POST /security/user/authenticate" with parameters {} and body {} done in 5.324s: 200
+2023/07/21 07:44:51 INFO: wazuh-wui 172.18.0.4 "POST /security/user/authenticate" with parameters {} and body {} done in 3.629s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /rules" with parameters {"filename": "0490-virustotal_rules.xml", "offset": "0", "limit": "10", "sort": "+id"} and body {} done in 6.037s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /mitre/tactics" with parameters {"tactic_ids": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5"} and body {} done in 4.013s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /manager/info" with parameters {} and body {} done in 0.366s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /manager/info" with parameters {} and body {} done in 0.376s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"agents_list": "000"} and body {} done in 0.077s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"agents_list": "000"} and body {} done in 0.049s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.092s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.075s: 200
+2023/07/21 07:44:52 INFO: wazuh-wui 172.18.0.4 "GET /" with parameters {} and body {} done in 0.019s: 200
+2023/07/21 07:44:53 INFO: wazuh-wui 172.18.0.4 "GET /" with parameters {} and body {} done in 0.037s: 200
+2023/07/21 07:44:54 INFO: wazuh-wui 172.18.0.4 "GET /agents/summary/status" with parameters {} and body {} done in 0.061s: 200
+2023/07/21 07:44:54 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.087s: 200
+2023/07/21 07:44:54 INFO: wazuh-wui 172.18.0.4 "GET /manager/api/config" with parameters {} and body {} done in 0.080s: 200
+2023/07/21 07:44:54 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.072s: 200
+2023/07/21 07:44:54 INFO: wazuh-wui 172.18.0.4 "GET /manager/configuration/request/remote" with parameters {} and body {} done in 0.027s: 200
+2023/07/21 07:44:54 INFO: wazuh-wui 172.18.0.4 "GET /agents/000/config/auth/auth" with parameters {} and body {} done in 0.030s: 200
+2023/07/21 07:44:55 INFO: wazuh-wui 172.18.0.4 "GET /groups" with parameters {} and body {} done in 0.076s: 200
+2023/07/21 07:45:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/remoted" with parameters {"pretty": ""} and body {} done in 0.101s: 200
+2023/07/21 07:45:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/analysisd" with parameters {"pretty": ""} and body {} done in 0.084s: 200
+2023/07/21 07:45:00 INFO: wazuh-wui 172.18.0.4 "GET /cluster/status" with parameters {} and body {} done in 0.108s: 200
+2023/07/21 07:45:01 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"offset": "0", "limit": "1", "q": "id!=000"} and body {} done in 0.048s: 200
+2023/07/21 07:45:01 INFO: wazuh-wui 172.18.0.4 "GET /agents" with parameters {"offset": "0", "limit": "500", "q": "id!=000"} and body {} done in 0.032s: 200
+2023/07/21 07:50:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/remoted" with parameters {"pretty": ""} and body {} done in 0.084s: 200
+2023/07/21 07:50:00 INFO: wazuh-wui 172.18.0.4 "GET /manager/stats/analysisd" with parameters {"pretty": ""} and body {} done in 0.056s: 200

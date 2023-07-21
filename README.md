@@ -50,6 +50,13 @@ fi
 
 exit 0;
 ```
+And also change this section of /var/ossec/etc/ossec.conf to
+```
+<!-- Directories to check  (perform all possible verifications) -->
+    <directories>/etc,/usr/bin,/usr/sbin</directories>
+    <directories check_all="yes" whodata="yes" realtime="yes">/bin,/sbin,/boot</directories>
+```
+make sure realtime="yes"
 
 Set permissions to the remove-threat.sh
 ```

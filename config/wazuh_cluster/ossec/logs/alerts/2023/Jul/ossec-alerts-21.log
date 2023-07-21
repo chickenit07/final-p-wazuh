@@ -243,3 +243,23 @@ Rule: 31101 (level 5) -> 'Web server 400 error code.'
 Src IP: 64.62.197.189
 64.62.197.189 - - [21/Jul/2023:14:32:28 +0700] "CONNECT www.shadowserver.org:443 HTTP/1.1" 400 166 "-" "-"
 
+** Alert 1689925171.15629: - ossec,pci_dss_10.6.1,pci_dss_10.2.6,gpg13_10.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_AU.6,nist_800_53_AU.14,nist_800_53_AU.5,tsc_CC7.2,tsc_CC7.3,tsc_CC6.8,
+2023 Jul 21 07:39:31 (chickenit.tech) any->wazuh-remoted
+Rule: 506 (level 3) -> 'Ossec agent stopped.'
+ossec: Agent stopped: 'chickenit.tech->any'.
+
+** Alert 1689925173.15968: - ossec,pci_dss_10.6.1,pci_dss_10.2.6,gpg13_10.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_AU.6,nist_800_53_AU.14,nist_800_53_AU.5,tsc_CC7.2,tsc_CC7.3,tsc_CC6.8,
+2023 Jul 21 07:39:33 (chickenit.tech) any->wazuh-agent
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'chickenit.tech->any'.
+
+** Alert 1689925769.16305: - ossec,pci_dss_10.6.1,pci_dss_10.2.6,gpg13_10.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_AU.6,nist_800_53_AU.14,nist_800_53_AU.5,tsc_CC7.2,tsc_CC7.3,tsc_CC6.8,
+2023 Jul 21 07:49:29 (chickenit.tech) any->wazuh-remoted
+Rule: 506 (level 3) -> 'Ossec agent stopped.'
+ossec: Agent stopped: 'chickenit.tech->any'.
+
+** Alert 1689925770.16644: - ossec,pci_dss_10.6.1,pci_dss_10.2.6,gpg13_10.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_AU.6,nist_800_53_AU.14,nist_800_53_AU.5,tsc_CC7.2,tsc_CC7.3,tsc_CC6.8,
+2023 Jul 21 07:49:30 (chickenit.tech) any->wazuh-agent
+Rule: 503 (level 3) -> 'Ossec agent started.'
+ossec: Agent started: 'chickenit.tech->any'.
+
