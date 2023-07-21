@@ -1,0 +1,25 @@
+<!--
+Additional MariaDB decoder
+MariaDB log_error
+2023-05-24 16:08:11 206291236 [Warning] Aborted connection 206291236 to db: 'test' user: 'root' host: '1.2.3.4' (Got an error reading communication packets)
+2023-05-29  2:59:54 35 [Warning] Access denied for user 'root'@'localhost'
+-->
+<decoder name="mariadb-syslog">
+    <prematch>^\S+\s+\S+\s+\d+\s+[\w+]\s+Aborted connection</prematch>
+</decoder>
+
+<decoder name="mariadb-warning-aborted">
+    <parent>mariadb-syslog</parent>
+    <regex type="pcre2">^\S+\s+\S+\s+\d+\s+(\S+)\s(.+)\s\d+.+db:\s'(\w+)'\suser:\s'(\w+)'\shost:\s'(\S+)'\s\((.+)\)$</regex>
+    <order>mariadb.type,mariadb.head,mariadb.targetDB,mariadb.user,mariadb.src_host,mariadb.message</order>
+</decoder>
+
+<decoder name="mariadb-syslog">
+    <prematch>^\S+\s+\S+\s+\d+\s+[\w+]\s+Access denied</prematch>
+</decoder>
+
+<decoder name="mariadb-warning-access-denied">
+    <parent>mariadb-syslog</parent>
+    <regex type="pcre2">^\S+\s+\S+\s+\d+\s+(\S+)\s(.+)\sfor\suser\s'(\w+)'@'(\w+)'</regex>
+    <order>mariadb.type,mariadb.head,mariadb.user,mariadb.host</order>
+</decoder>

@@ -1,0 +1,10 @@
+Current checksum:
+MD5  (logs/alerts/2023/Jul/ossec-alerts-19) = 7a79265ffd65db99e8af9daa3f440865
+SHA1 (logs/alerts/2023/Jul/ossec-alerts-19) = fa6522c5a033e598dc18f49c9604c82e3dbd46cf
+SHA256 (logs/alerts/2023/Jul/ossec-alerts-19) = 69016cd448461680eff02a452c5a14545c23a67e274144d9900e47222525ae0d
+
+Chained checksum:
+MD5  (logs/alerts/2023/Jul/ossec-alerts-18.log.sum) = 2f4594e27f6cd1670a0047ddfd53f881
+SHA1 (logs/alerts/2023/Jul/ossec-alerts-18.log.sum) = 1f2ed15ff39a8466d2493406f513b18ca799f892
+SHA256 (logs/alerts/2023/Jul/ossec-alerts-18.log.sum) = 373f6d615944d048eae4b5355a2b798176063882d01bd95c858eae8cae392e1d
+

@@ -1,0 +1,68 @@
+** Alert 1689898251.0: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 00:10:51 (chickenit.tech) any->/var/log/nginx/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 193.35.18.33
+193.35.18.33 - - [21/Jul/2023:07:10:49 +0700] "CONNECT google.com:443 HTTP/1.1" 400 166 "-" "-"
+
+** Alert 1689901768.433: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 01:09:28 (chickenit.tech) any->/var/log/nginx/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 45.128.232.125
+45.128.232.125 - - [21/Jul/2023:08:09:27 +0700] "CONNECT google.com:443 HTTP/1.1" 400 166 "-" "-"
+
+** Alert 1689905231.872: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:07:11 (chickenit.tech) any->/var/log/nginx/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 199.254.199.244
+199.254.199.244 - - [21/Jul/2023:09:07:11 +0700] "CONNECT create.roblox.com:443 HTTP/1.1" 400 166 "-" "-"
+
+** Alert 1689906258.1320: - syslog,sshd,authentication_success,gdpr_IV_32.2,gpg13_7.1,gpg13_7.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,pci_dss_10.2.5,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:24:18 (chickenit.tech) any->/var/log/auth.log
+Rule: 5715 (level 3) -> 'sshd: authentication success.'
+Src IP: 210.245.52.57
+Src Port: 50720
+User: datpq
+Jul 21 09:24:17 chickenit sshd[489003]: Accepted password for datpq from 210.245.52.57 port 50720 ssh2
+
+** Alert 1689906258.1784: - syslog,sshd,authentication_success,gdpr_IV_32.2,gpg13_7.1,gpg13_7.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,pci_dss_10.2.5,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:24:18 (chickenit.tech) any->/var/log/auth.log
+Rule: 5715 (level 3) -> 'sshd: authentication success.'
+Src IP: 210.245.52.57
+Src Port: 50720
+User: datpq
+Jul 21 09:24:17 chickenit sshd[489003]: Accepted password for datpq from 210.245.52.57 port 50720 ssh2
+
+** Alert 1689906258.2248: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:24:18 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Jul 21 09:24:17 chickenit sshd[489003]: pam_unix(sshd:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1689906258.2679: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:24:18 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Jul 21 09:24:17 chickenit sshd[489003]: pam_unix(sshd:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1689906258.3110: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:24:18 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Jul 21 09:24:17 chickenit systemd: pam_unix(systemd-user:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1689906258.3544: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:24:18 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Jul 21 09:24:17 chickenit systemd: pam_unix(systemd-user:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1689908022.3978: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Jul 21 02:53:42 (chickenit.tech) any->/var/log/nginx/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 193.35.18.33
+193.35.18.33 - - [21/Jul/2023:09:53:42 +0700] "CONNECT google.com:443 HTTP/1.1" 400 166 "-" "-"
+

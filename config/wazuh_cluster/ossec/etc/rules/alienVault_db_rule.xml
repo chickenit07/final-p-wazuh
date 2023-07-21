@@ -1,0 +1,7 @@
+<group name="attack,">
+    <rule id="101000" level="13">
+        <if_group>web|attack|attacks</if_group>
+        <list field="srcip" lookup="address_match_key">etc/lists/blacklist-alienvault</list>
+        <description>IP address found in AlienVault reputation database.</description>
+    </rule>
+</group>
