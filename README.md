@@ -21,7 +21,10 @@ $ docker-compose up
 $ docker-compose up -d
 ```
 
-Remove thread found on Virus Total
+The environment takes about 1 minute to get up (depending on your Docker host) for the first time since Wazuh Indexer must be started for the first time and the indexes and index patterns must be generated.
+
+
+#Remove thread found on Virus Total
 Place this remove-threat.sh script in /var/ossec/active-response/bin/
 ```
 #!/bin/bash
@@ -53,7 +56,8 @@ Set permissions to the remove-threat.sh
 chown root:wazuh /var/ossec/active-response/bin/remove-threat.sh
 chmod 750 /var/ossec/active-response/bin/remove-threat.sh
 ```
-
-Systemctl restart wazuh-agent
-The environment takes about 1 minute to get up (depending on your Docker host) for the first time since Wazuh Indexer must be started for the first time and the indexes and index patterns must be generated.
+Then restart the Wazuh Agent
+```
+systemctl restart wazuh-agent
+```
 # final-p-wazuh
