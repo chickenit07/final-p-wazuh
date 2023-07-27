@@ -1,0 +1,85 @@
+<!-- Modify it at your will. -->
+<group name="RCE">
+  <rule id="101025" level="14">
+    <decoded_as>web-accesslog</decoded_as>
+    <url type="pcre2"></url>
+    <description>Possible Command Execution from Public IP</description>
+    <mitre>
+      <id>T1055</id>
+      <id>T1083</id>
+      <id>T1190</id>
+    </mitre>
+    <group>attack,pci_dss_10.2.4,pci_dss_10.2.5,</group>
+  </rule>
+  
+<!--  <rule id="101026" level="14">-->
+<!--    <decoded_as>web-accesslog</decoded_as>-->
+<!-- (?!\w)(?!\.): to ensure that the word matched is not part of another word, and is not followed by a dot or period.--> 
+<!--    <regex type="pcre2">\W\d+\W:\s+(\d+.\d+.\d+.\d+):\d+\s+\W\d+\D+\d+:\d+:\d+:\d+(.*)curl</regex>-->
+<!--    <description>Possible Command Execution from Public IP</description>-->
+<!--    <mitre>-->
+<!--      <id>T1055</id>-->
+<!--      <id>T1083</id>-->
+<!--      <id>T1190</id>-->
+<!--    </mitre>-->
+<!--    <group>attack,pci_dss_10.2.4,pci_dss_10.2.5,</group>-->
+<!--  </rule>-->
+<!--  <rule id="101027" level="14">-->
+<!--        <decoded_as>web-accesslog</decoded_as>-->
+<!-- (?!\w)(?!\.): to ensure that the word matched is not part of another word, and is not followed by a dot or period.--> 
+<!--        <regex type="pcre2">\W\d+\W:\s+(\d+.\d+.\d+.\d+):\d+\s+\W\d+\D+\d+:\d+:\d+:\d+(.*)(?i)wget</regex>-->
+<!--        <description>Possible Command Execution from Public IP</description>-->
+<!--        <mitre>-->
+<!--      <id>T1055</id>-->
+<!--      <id>T1083</id>-->
+<!--      <id>T1190</id>-->
+<!--    </mitre>-->
+<!--        <group>attack,pci_dss_10.2.4,pci_dss_10.2.5,</group>-->
+<!--  </rule>-->
+  
+<!--  <rule id="101028" level="14">-->
+<!--        <decoded_as>web-accesslog</decoded_as>-->
+        <!-- (?!\w)(?!\.): to ensure that the word matched is not part of another word, and is not followed by a dot or period.--> 
+<!--        <regex type="pcre2">\W\d+\W:\s+(\d+.\d+.\d+.\d+):\d+\s+\W\d+\D+\d+:\d+:\d+:\d+(.*)(?i)chmod(?!\w)(?!\.)</regex> -->
+<!--        <description>Possible Command Execution from Public IP</description>-->
+<!--        <mitre>-->
+<!--      <id>T1055</id>-->
+<!--      <id>T1083</id>-->
+<!--      <id>T1190</id>-->
+<!--    </mitre>-->
+<!--        <group>attack,pci_dss_10.2.4,pci_dss_10.2.5,</group>-->
+<!--  </rule>-->
+  
+<!--  <rule id="101029" level="14">-->
+<!--        <decoded_as>web-accesslog</decoded_as>-->
+<!-- (?!\w)(?!\.): to ensure that the word matched is not part of another word, and is not followed by a dot or period.--> 
+<!--        <regex type="pcre2">\W\d+\W:\s+(\d+.\d+.\d+.\d+):\d+\s+\W\d+\D+\d+:\d+:\d+:\d+(.*)(?i)python(?!\w)(?!\.)</regex>-->
+<!--        <description>Possible Command Execution from Public IP</description>-->
+<!--        <mitre>-->
+<!--      <id>T1055</id>-->
+<!--      <id>T1083</id>-->
+<!--      <id>T1190</id>-->
+<!--    </mitre>-->
+<!--        <group>attack,pci_dss_10.2.4,pci_dss_10.2.5,</group>-->
+<!--  </rule>-->
+<!--    <rule id="101030" level="14">-->
+<!--        <decoded_as>web-accesslog</decoded_as>-->
+<!-- (?!\w)(?!\.): to ensure that the word matched is not part of another word, and is not followed by a dot or period.--> 
+<!--        <regex type="pcre2">\W\d+\W:\s+(\d+.\d+.\d+.\d+):\d+\s+\W\d+\D+\d+:\d+:\d+:\d+(.*)(?i)python3(?!\w)(?!\.)</regex>-->
+<!--        <description>Possible Command Execution from Public IP</description>-->
+<!--        <mitre>-->
+<!--      <id>T1055</id>-->
+<!--      <id>T1083</id>-->
+<!--      <id>T1190</id>-->
+<!--    </mitre>-->
+<!--        <group>attack,pci_dss_10.2.4,pci_dss_10.2.5,</group>-->
+<!--  </rule>-->
+  
+<!--  Add rule chống tấn công XXE (1 rule chạy từ 101051)-->
+<!--  <rule id="101051" level="14">-->
+<!--        <if_sid>10100</if_sid>-->
+<!--        <regex type="pcre2">\W\d+\W:\s+(\d+.\d+.\d+.\d+):\d+\s+\W\d+\D+\d+:\d+:\d+:\d+(.*)(?i)select(.*)(?i)extractvalue(.*)(?i)xmltype</regex>-->
+<!--        <description>Possible Attack XXE from Public IP</description>-->
+<!--        <group>pci_dss_10.2.4,pci_dss_10.2.5,</group>-->
+<!--  </rule>-->
+</group>

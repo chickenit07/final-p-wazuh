@@ -1,9 +1,9 @@
 <group name="linux, webshell, windows,">
   <!-- This rule detects file creation. -->
-  <rule id="100500" level="12">
+  <rule id="100500" level="10">
     <if_sid>554</if_sid>
     <field name="file" type="pcre2">(?i).php$|.phtml$|.php3$|.php4$|.php5$|.phps$|.phar$|.asp$|.aspx$|.jsp$|.cshtml$|.vbhtml$</field>
-    <description>[File creation]: Possible web shell scripting file ($(file)) created</description>
+    <description>A scripting file ($(file)) created might indicate a Web Shell</description>
     <mitre>
       <id>T1105</id>
       <id>T1505</id>
@@ -14,7 +14,7 @@
   <rule id="100501" level="12">
     <if_sid>550</if_sid>
     <field name="file" type="pcre2">(?i).php$|.phtml$|.php3$|.php4$|.php5$|.phps$|.phar$|.asp$|.aspx$|.jsp$|.cshtml$|.vbhtml$</field>
-    <description>[File modification]: Possible web shell content added in $(file)</description>
+    <description>File content added in $(file) might indicate a Web Shell</description>
     <mitre>
       <id>T1105</id>
       <id>T1505</id>

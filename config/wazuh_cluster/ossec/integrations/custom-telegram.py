@@ -1,20 +1,38 @@
 #!/usr/bin/env python
 
 import sys
+import time
 import json
+import os
 import requests
 from requests.auth import HTTPBasicAuth
 
-#CHAT_ID="xxxx"
-CHAT_ID="-994280177"
+debug_enabled = True
 
+now = time.strftime("%a %b %d %H:%M:%S %Z %Y")
+pwd = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+# Set paths
+log_file = '{0}/logs/integrations.log'.format(pwd)
+
+def debug(msg):
+    if debug_enabled:
+        msg = "{0}: {1}\n".format(now, msg)
+        print(msg)
+        f = open(log_file,"a")
+        f.write(msg)
+        f.close()
+
+CHAT_ID="-994280177"
+#CHAT_ID=os.environ.get('TELEGRAM_CHAT_ID')
+#debug(CHAT_ID)
 # Read configuration parameters
 alert_file = open(sys.argv[1])
 hook_url = sys.argv[3]
 
-
 # Read the alert file
 alert_json = json.loads(alert_file.read())
+debug("# TELEGRAM ALERT JSON")
+#debug(alert_json)
 alert_file.close()
 
 # Extract data fields
