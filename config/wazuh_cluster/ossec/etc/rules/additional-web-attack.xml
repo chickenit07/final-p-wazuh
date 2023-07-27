@@ -1,4 +1,5 @@
 <group name="web,accesslog,">
+
   <rule id="31103" level="13" overwrite="yes">
     <if_sid>31100,31108</if_sid>
     <url>=select%20|select+|insert%20|%20from%20|%20where%20|union%20|</url>
@@ -9,17 +10,37 @@
     </mitre>
     <group>attack,sql_injection,pci_dss_6.5,pci_dss_11.4,pci_dss_6.5.1,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
   </rule>
+  <rule id="31190" level="6">
+    <if_sid>31100</if_sid>
 
-  <rule id="31104" level="13" overwrite="yes">
+    <!-- Attempt run malicious command. -->
+    <url>=cat%20|passwd|shadow|=powershell%20|=wget%20|=chmod%20|=curl%20|=certutil%20|=/bin/bash%20|=/bin/sh%20|=sh%20|=bash%20|=nc%20</url>
+    <url>=nc%20|=nc.exe%20|python%20-c|python3%20-c|telnet%20|=zsh%20|=/usr/bin/zsh%20|=%20</url>
+        <description>Possible Remote Command Execution attempt from '$(srcip)'.</description>
+  </rule>
+    <rule id="31191" level="13">
+    <if_sid>31190</if_sid>
+
+    <!-- Return code 200. -->
+    <id>200</id>
+        <description>Remote Command Execution attempt returned code 200 from '$(srcip)'.</description>
+    <mitre>
+      <id>T1055</id>
+      <id>T1083</id>
+      <id>T1190</id>
+    </mitre>
+    <group>attack,pci_dss_6.5,pci_dss_11.4,pci_dss_6.5.1,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
+  </rule>
+  <rule id="31104" level="10" overwrite="yes">
     <if_sid>31100</if_sid>
 
     <!-- Attempt to do directory transversal, simple sql injections,
       -  or access to the etc or bin directory (unix). -->
-    <url>%027|%00|%01|%7f|%2E%2E|%0A|%0D|../..|..\..|echo;|</url>
+    <url>%027|%00|%01|%7f|%2E%2E|%0A|%0D|../..|..\..|echo;</url>
     <url>cmd.exe|root.exe|_mem_bin|msadc|/winnt/|/boot.ini|</url>
     <url>/x90/|default.ida|/sumthin|nsiislog.dll|chmod%|wget%|cd%20|</url>
     <url>exec%20|../..//|%5C../%5C|././././|2e%2e%5c%2e|\x5C\x5C</url>
-    <description>Common web attack from '$(srcip)'.</description>
+        <description>Common attacks or scannings attempt to exploit server from '$(srcip)'.</description>
     <mitre>
       <id>T1055</id>
       <id>T1083</id>
@@ -38,11 +59,11 @@
     </mitre>
     <group>attack,pci_dss_6.5,pci_dss_11.4,pci_dss_6.5.7,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
   </rule>
-
-  <rule id="31106" level="13" overwrite="yes">
+  
+  <rule id="31106" level="15" overwrite="yes">
     <if_sid>31103, 31104, 31105</if_sid>
     <id>^200</id>
-    <description>A web attack returned code 200 (success) from '$(srcip)'.</description>
+    <description>CRITICAL ATTACK returned code 200 (success) from '$(srcip)'.</description>
     <mitre>
       <id>T1190</id>
     </mitre>
@@ -96,10 +117,10 @@
     <group>attack,sql_injection,pci_dss_6.5,pci_dss_11.4,pci_dss_6.5.1,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
   </rule>
 
-  <rule id="31153" level="15" frequency="10" timeframe="120" overwrite="yes">
+  <rule id="31153" level="15" frequency="8" timeframe="120" overwrite="yes">
     <if_matched_sid>31104</if_matched_sid>
     <same_source_ip />
-    <description>Multiple common web attacks from same source ip '$(srcip)'.</description>
+    <description>Multiple CRITICAL ATTACKS from same source ip '$(srcip)'.</description>
     <mitre>
       <id>T1055</id>
       <id>T1083</id>

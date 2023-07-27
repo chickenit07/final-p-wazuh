@@ -1,5 +1,5 @@
 #Apache2
-!366 ar.conf
+!403 ar.conf
 restart-ossec0 - restart-ossec.sh - 0
 restart-ossec0 - restart-ossec.cmd - 0
 restart-wazuh0 - restart-ossec.sh - 0
@@ -10,6 +10,7 @@ remove-threat0 - remove-threat.sh - 0
 firewall-drop60 - firewall-drop - 60
 netsh60 - netsh.exe - 60
 remove-threat0 - remove-threat.sh - 0
+firewall-drop60 - firewall-drop - 60
 !206 agent.conf
   <agent_config>
     <!-- Shared agent configuration here -->
