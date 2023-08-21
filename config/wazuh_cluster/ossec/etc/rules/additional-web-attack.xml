@@ -13,8 +13,8 @@
   <rule id="31190" level="6">
     <if_sid>31100</if_sid>
 
-    <!-- Attempt run malicious command. -->
-    <url>=cat%20|passwd|shadow|=powershell%20|=wget%20|=chmod%20|=curl%20|=certutil%20|=/bin/bash%20|=/bin/sh%20|=sh%20|=bash%20|=nc%20</url>
+    <!-- Attempt run malicious command.  -->
+    <url>=cat%20|/etc/passwd|/etc/shadow|=powershell%20|=wget%20|=chmod%20|=curl%20|=certutil%20|=/bin/bash%20|=/bin/sh%20|=sh%20|=bash%20|=nc%20</url>
     <url>=nc%20|=nc.exe%20|python%20-c|python3%20-c|telnet%20|=zsh%20|=/usr/bin/zsh%20|=%20</url>
         <description>Possible Remote Command Execution attempt from '$(srcip)'.</description>
   </rule>

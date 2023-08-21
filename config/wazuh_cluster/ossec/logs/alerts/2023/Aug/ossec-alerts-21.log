@@ -1,0 +1,103 @@
+** Alert 1692578446.0: - local,systemd,gpg13_4.3,gdpr_IV_35.7.d,
+2023 Aug 21 00:40:46 (chickenit.tech) any->/var/log/syslog
+Rule: 40704 (level 5) -> 'Systemd: Service exited due to a failure.'
+Aug 21 07:40:46 chickenit systemd[1]: fwupd-refresh.service: Main process exited, code=exited, status=1/FAILURE
+
+** Alert 1692581313.306: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 01:28:33 (chickenit.tech) any->/var/log/apache2/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 164.155.255.230
+164.155.255.230 - - [21/Aug/2023:08:28:31 +0700] "GET /phpmyadmin/index.php HTTP/1.1" 404 438 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0"
+
+** Alert 1692582022.823: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 01:40:22 (chickenit.tech) any->/var/log/apache2/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 162.243.137.18
+162.243.137.18 - - [21/Aug/2023:08:40:22 +0700] "GET /portal/redlion HTTP/1.1" 404 438 "-" "Mozilla/5.0 zgrab/0.x"
+
+** Alert 1692583823.1281: - web,accesslog,attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC8.1,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 02:10:23 (chickenit.tech) any->/var/log/apache2/access.log
+Rule: 31101 (level 5) -> 'Web server 400 error code.'
+Src IP: 45.66.230.31
+45.66.230.31 - - [21/Aug/2023:09:10:23 +0700] "GET /wp-content/plugins/core-plugin/include.php HTTP/1.1" 404 493 "www.google.com" "Mozlila/5.0 (Linux; Android 7.0; SM-G892A Bulid/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Moblie Safari/537.36"
+
+** Alert 1692584798.1908: - pam,syslog,authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,gpg13_7.8,gdpr_IV_35.7.d,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 02:26:38 (chickenit.tech) any->/var/log/auth.log
+Rule: 5503 (level 5) -> 'PAM: User login failed.'
+Src IP: 102.91.46.178
+User: test
+Aug 21 09:26:37 chickenit sshd[2042302]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=102.91.46.178  user=test
+uid: 0
+euid: 0
+tty: ssh
+
+** Alert 1692584798.2452: - pam,syslog,authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,gpg13_7.8,gdpr_IV_35.7.d,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 02:26:38 (chickenit.tech) any->/var/log/auth.log
+Rule: 5503 (level 5) -> 'PAM: User login failed.'
+Src IP: 102.91.46.178
+User: test
+Aug 21 09:26:37 chickenit sshd[2042302]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=102.91.46.178  user=test
+uid: 0
+euid: 0
+tty: ssh
+
+** Alert 1692584798.2996: - syslog,sshd,authentication_failed,gdpr_IV_35.7.d,gdpr_IV_32.2,gpg13_7.1,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,pci_dss_10.2.4,pci_dss_10.2.5,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 02:26:38 (chickenit.tech) any->/var/log/auth.log
+Rule: 5760 (level 5) -> 'sshd: authentication failed.'
+Src IP: 102.91.46.178
+Src Port: 63829
+User: test
+Aug 21 09:26:38 chickenit sshd[2042302]: Failed password for test from 102.91.46.178 port 63829 ssh2
+
+** Alert 1692584798.3485: - syslog,sshd,authentication_failed,gdpr_IV_35.7.d,gdpr_IV_32.2,gpg13_7.1,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,pci_dss_10.2.4,pci_dss_10.2.5,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 02:26:38 (chickenit.tech) any->/var/log/auth.log
+Rule: 5760 (level 5) -> 'sshd: authentication failed.'
+Src IP: 102.91.46.178
+Src Port: 63829
+User: test
+Aug 21 09:26:38 chickenit sshd[2042302]: Failed password for test from 102.91.46.178 port 63829 ssh2
+
+** Alert 1692587607.3974: - syslog,sshd,authentication_success,gdpr_IV_32.2,gpg13_7.1,gpg13_7.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,pci_dss_10.2.5,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 03:13:27 (chickenit.tech) any->/var/log/auth.log
+Rule: 5715 (level 3) -> 'sshd: authentication success.'
+Src IP: 210.245.52.57
+Src Port: 64532
+User: datpq
+Aug 21 10:13:26 chickenit sshd[2043202]: Accepted password for datpq from 210.245.52.57 port 64532 ssh2
+
+** Alert 1692587607.4439: - syslog,sshd,authentication_success,gdpr_IV_32.2,gpg13_7.1,gpg13_7.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,pci_dss_10.2.5,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 03:13:27 (chickenit.tech) any->/var/log/auth.log
+Rule: 5715 (level 3) -> 'sshd: authentication success.'
+Src IP: 210.245.52.57
+Src Port: 64532
+User: datpq
+Aug 21 10:13:26 chickenit sshd[2043202]: Accepted password for datpq from 210.245.52.57 port 64532 ssh2
+
+** Alert 1692587607.4904: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 03:13:27 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Aug 21 10:13:26 chickenit sshd[2043202]: pam_unix(sshd:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1692587607.5336: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 03:13:27 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Aug 21 10:13:26 chickenit sshd[2043202]: pam_unix(sshd:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1692587607.5768: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 03:13:27 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Aug 21 10:13:26 chickenit systemd: pam_unix(systemd-user:session): session opened for user datpq by (uid=0)
+uid: 0
+
+** Alert 1692587607.6202: - pam,syslog,authentication_success,pci_dss_10.2.5,gpg13_7.8,gpg13_7.9,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,
+2023 Aug 21 03:13:27 (chickenit.tech) any->/var/log/auth.log
+Rule: 5501 (level 3) -> 'PAM: Login session opened.'
+User: datpq
+Aug 21 10:13:26 chickenit systemd: pam_unix(systemd-user:session): session opened for user datpq by (uid=0)
+uid: 0
+
